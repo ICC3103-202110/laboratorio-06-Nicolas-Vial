@@ -24,21 +24,21 @@ function CelsiusKelvin(from, number){
 }
 
 function functionSelecter(initialUnit, finalUnit){
-    if(initialUnit==='Celsius' && finalUnit==='Fahreinheit'){
+    if(initialUnit==='Celsius' && finalUnit==='Fahrenheit'){
         return ['C-F','Celsius']
-    }else if(initialUnit==='Fahreinheit'&& finalUnit==='Celsius'){
-        return ['C-F','Fahreinheit']
+    }else if(initialUnit==='Fahrenheit' &&finalUnit==='Celsius'){
+        return ['C-F','Fahrenheit']
     }
     
-    else if(initialUnit==='Kelvin' && finalUnit==='Fahreinheit'){
+    else if(initialUnit==='Kelvin' && finalUnit==='Fahrenheit'){
         return ['K-F','Kelvin']
-    }else if(initialUnit==='Fahreinheit' && finalUnit==='Kelvin'){
-        return ['K-F','Fahreinheit']
+    }else if(initialUnit==='Fahrenheit' && finalUnit==='Kelvin'){
+        return ['K-F','Fahrenheit']
     }
 
     else if(initialUnit==='Celsius' && finalUnit==='Kelvin'){
         return ['C-K','Celsius']
-    }else{
+    }else if((initialUnit==='Kelvin' && finalUnit==='Celsius')){
         return ['C-K','Kelvin']
     }
 }
@@ -73,6 +73,7 @@ function change(
         }else{
             const newNumber=calculate(functionSelecter(initialUnit,finalUnit),parseInt(number))
             return [newNumber,finalUnit,rightValue,rightUnit]
+            
         }
     }else{
         if(initialUnit===finalUnit){

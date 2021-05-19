@@ -29,12 +29,6 @@ async function app(leftValue,leftUnit, rightValue,rightUnit){
     rightUnit=list[3]
 
     
-
-
-
-
-
-    
     console.clear()
     app(leftValue,leftUnit, rightValue,rightUnit) //recursividad
 
