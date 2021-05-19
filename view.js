@@ -55,13 +55,14 @@ function input(side, number1, number2,unit1,unit2){
             },{
                 type:'list',
                 name:'initialUnit',
-                message: unit,
-                default: 'Celsius',
+                message: 'From?',
+                default: unit,
                 choices:['Celsius','Fahrenheit','Kelvin'] 
             },{
                 type:'list',
                 name:'finalUnit',
                 message: 'To?',
+                default: unit,
                 choices:['Celsius','Fahrenheit','Kelvin'] 
             }
         ])

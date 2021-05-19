@@ -15,6 +15,7 @@ async function app(leftValue,leftUnit, rightValue,rightUnit){
     let list=change(
         side.side,
         answer.number,
+        answer.initialUnit,
         answer.finalUnit,
         leftValue,
         leftUnit,
@@ -26,6 +27,13 @@ async function app(leftValue,leftUnit, rightValue,rightUnit){
     leftUnit=list[1]
     rightValue=parseInt(list[2])
     rightUnit=list[3]
+
+    
+
+
+
+
+
     
     console.clear()
     app(leftValue,leftUnit, rightValue,rightUnit) //recursividad
